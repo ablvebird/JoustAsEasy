@@ -23,15 +23,16 @@ public class StatCRUD {
     }
     public static List<Stat> getStatsByCharacterKey(String characterKey) {
         try (Session session = HibernateSettings.getSessionFactory().openSession()) {
-            // HQL query to select stats by its characterKey
-            String hql = "from Stat where characterKey = :character_key";
+            // HQL query to select stats by characterKey
+            String hql = "from Stat where character.characterKey = :character_key";
             Query<Stat> query = session.createQuery(hql, Stat.class);
             query.setParameter("character_key", characterKey);
 
-            // Execute the query and return the characters from the house
+            // Execute the query and return the stats for the character
             return query.getResultList();
         }
     }
+
 
 
     //INSERT

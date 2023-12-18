@@ -62,5 +62,6 @@ public class Main {
         List<Stat> nedStats = StatCRUD.getStatsByCharacterKey("NED");
         Printer.printStatList(nedStats);
 
+        //
     }
 }
