@@ -34,6 +34,19 @@ public class CharacterCRUD {
         }
     }
 
+    public static Character getCharacterByCharacterKey(String characterKey) {
+        try (Session session = HibernateSettings.getSessionFactory().openSession()) {
+            // HQL query to select a house by its houseKey
+            String hql = "from Character where characterKey = :character_key";
+            Query<Character> query = session.createQuery(hql, Character.class);
+            query.setParameter("character_key", characterKey);
+
+            // Execute the query and return the single house or null if not found
+            List<Character> resultList = query.getResultList();
+            return resultList.isEmpty() ? null : resultList.get(0);
+        }
+    }
+
 
 
     //INSERT
@@ -41,7 +54,7 @@ public class CharacterCRUD {
         try (Session session = HibernateSettings.getSessionFactory().openSession()) {
             // If no existing house with the same code, proceed with the insertion
             session.beginTransaction();
-            session.save(newCharacter);
+            session.persist(newCharacter);
             session.getTransaction().commit();
         }
     }

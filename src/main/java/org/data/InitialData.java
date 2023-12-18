@@ -2,8 +2,10 @@ package org.data;
 
 import org.crud.CharacterCRUD;
 import org.crud.HouseCRUD;
+import org.crud.StatCRUD;
 import org.entities.Character;
 import org.entities.House;
+import org.entities.Stat;
 
 public class InitialData {
 
@@ -238,4 +240,235 @@ public class InitialData {
         ));
     }
 
+    public static void createStarkStats(){
+        StatCRUD.insertStat(
+                new Stat(
+                        "NED01",
+                        "Tourney 01",
+                        DataGenerator.generateCasualtiesPerBout(),
+                        DataGenerator.generateCasualtiesPerBout(),
+                        DataGenerator.generateCasualtiesPerBout(),
+                        DataGenerator.generateRansomsPerBout(),
+                        CharacterCRUD.getCharacterByCharacterKey("NED")
+                )
+        );
+        StatCRUD.insertStat(
+                new Stat(
+                        "HOW01",
+                        "Tourney 01",
+                        DataGenerator.generateCasualtiesPerBout(),
+                        DataGenerator.generateCasualtiesPerBout(),
+                        DataGenerator.generateCasualtiesPerBout(),
+                        DataGenerator.generateRansomsPerBout(),
+                        CharacterCRUD.getCharacterByCharacterKey("NED")
+                )
+        );
+        StatCRUD.insertStat(
+                new Stat(
+                        "ROD01",
+                        "Tourney 01",
+                        DataGenerator.generateCasualtiesPerBout(),
+                        DataGenerator.generateCasualtiesPerBout(),
+                        DataGenerator.generateCasualtiesPerBout(),
+                        DataGenerator.generateRansomsPerBout(),
+                        CharacterCRUD.getCharacterByCharacterKey("NED")
+                )
+        );
+        StatCRUD.insertStat(
+                new Stat(
+                        "GRT01",
+                        "Tourney 01",
+                        DataGenerator.generateCasualtiesPerBout(),
+                        DataGenerator.generateCasualtiesPerBout(),
+                        DataGenerator.generateCasualtiesPerBout(),
+                        DataGenerator.generateRansomsPerBout(),
+                        CharacterCRUD.getCharacterByCharacterKey("NED")
+                )
+        );
+        StatCRUD.insertStat(
+                new Stat(
+                        "ETH01",
+                        "Tourney 01",
+                        DataGenerator.generateCasualtiesPerBout(),
+                        DataGenerator.generateCasualtiesPerBout(),
+                        DataGenerator.generateCasualtiesPerBout(),
+                        DataGenerator.generateRansomsPerBout(),
+                        CharacterCRUD.getCharacterByCharacterKey("NED")
+                )
+        );
+    }
+
+    public static void createLannisterStats(){
+        StatCRUD.insertStat(
+                new Stat(
+                        "JAI01",
+                        "Tourney 01",
+                        DataGenerator.generateCasualtiesPerBout(),
+                        DataGenerator.generateCasualtiesPerBout(),
+                        DataGenerator.generateCasualtiesPerBout(),
+                        DataGenerator.generateRansomsPerBout(),
+                        CharacterCRUD.getCharacterByCharacterKey("LNN")
+                )
+        );
+        StatCRUD.insertStat(
+                new Stat(
+                        "SAN01",
+                        "Tourney 01",
+                        DataGenerator.generateCasualtiesPerBout(),
+                        DataGenerator.generateCasualtiesPerBout(),
+                        DataGenerator.generateCasualtiesPerBout(),
+                        DataGenerator.generateRansomsPerBout(),
+                        CharacterCRUD.getCharacterByCharacterKey("LNN")
+                )
+        );
+        StatCRUD.insertStat(
+                new Stat(
+                        "FLE01",
+                        "Tourney 01",
+                        DataGenerator.generateCasualtiesPerBout(),
+                        DataGenerator.generateCasualtiesPerBout(),
+                        DataGenerator.generateCasualtiesPerBout(),
+                        DataGenerator.generateRansomsPerBout(),
+                        CharacterCRUD.getCharacterByCharacterKey("LNN")
+                )
+        );
+        StatCRUD.insertStat(
+                new Stat(
+                        "ADA01",
+                        "Tourney 01",
+                        DataGenerator.generateCasualtiesPerBout(),
+                        DataGenerator.generateCasualtiesPerBout(),
+                        DataGenerator.generateCasualtiesPerBout(),
+                        DataGenerator.generateRansomsPerBout(),
+                        CharacterCRUD.getCharacterByCharacterKey("LNN")
+                )
+        );
+        StatCRUD.insertStat(
+                new Stat(
+                        "LYL01",
+                        "Tourney 01",
+                        DataGenerator.generateCasualtiesPerBout(),
+                        DataGenerator.generateCasualtiesPerBout(),
+                        DataGenerator.generateCasualtiesPerBout(),
+                        DataGenerator.generateRansomsPerBout(),
+                        CharacterCRUD.getCharacterByCharacterKey("LNN")
+                )
+        );
+    }
+
+    public static void createTargaryenStats(){
+        StatCRUD.insertStat(
+                new Stat(
+                        "JOR01",
+                        "Tourney 01",
+                        DataGenerator.generateCasualtiesPerBout(),
+                        DataGenerator.generateCasualtiesPerBout(),
+                        DataGenerator.generateCasualtiesPerBout(),
+                        DataGenerator.generateRansomsPerBout(),
+                        CharacterCRUD.getCharacterByCharacterKey("TRG")
+                )
+        );
+        StatCRUD.insertStat(
+                new Stat(
+                        "DAA01",
+                        "Tourney 01",
+                        DataGenerator.generateCasualtiesPerBout(),
+                        DataGenerator.generateCasualtiesPerBout(),
+                        DataGenerator.generateCasualtiesPerBout(),
+                        DataGenerator.generateRansomsPerBout(),
+                        CharacterCRUD.getCharacterByCharacterKey("TRG")
+                )
+        );
+        StatCRUD.insertStat(
+                new Stat(
+                        "GRW01",
+                        "Tourney 01",
+                        DataGenerator.generateCasualtiesPerBout(),
+                        DataGenerator.generateCasualtiesPerBout(),
+                        DataGenerator.generateCasualtiesPerBout(),
+                        DataGenerator.generateRansomsPerBout(),
+                        CharacterCRUD.getCharacterByCharacterKey("TRG")
+                )
+        );
+        StatCRUD.insertStat(
+                new Stat(
+                        "ROR01",
+                        "Tourney 01",
+                        DataGenerator.generateCasualtiesPerBout(),
+                        DataGenerator.generateCasualtiesPerBout(),
+                        DataGenerator.generateCasualtiesPerBout(),
+                        DataGenerator.generateRansomsPerBout(),
+                        CharacterCRUD.getCharacterByCharacterKey("TRG")
+                )
+        );
+        StatCRUD.insertStat(
+                new Stat(
+                        "JON01",
+                        "Tourney 01",
+                        DataGenerator.generateCasualtiesPerBout(),
+                        DataGenerator.generateCasualtiesPerBout(),
+                        DataGenerator.generateCasualtiesPerBout(),
+                        DataGenerator.generateRansomsPerBout(),
+                        CharacterCRUD.getCharacterByCharacterKey("TRG")
+                )
+        );
+    }
+
+    public static void createMartellStats(){
+        StatCRUD.insertStat(
+                new Stat(
+                        "OBE01",
+                        "Tourney 01",
+                        DataGenerator.generateCasualtiesPerBout(),
+                        DataGenerator.generateCasualtiesPerBout(),
+                        DataGenerator.generateCasualtiesPerBout(),
+                        DataGenerator.generateRansomsPerBout(),
+                        CharacterCRUD.getCharacterByCharacterKey("MRT")
+                )
+        );
+        StatCRUD.insertStat(
+                new Stat(
+                        "AND01",
+                        "Tourney 01",
+                        DataGenerator.generateCasualtiesPerBout(),
+                        DataGenerator.generateCasualtiesPerBout(),
+                        DataGenerator.generateCasualtiesPerBout(),
+                        DataGenerator.generateRansomsPerBout(),
+                        CharacterCRUD.getCharacterByCharacterKey("MRT")
+                )
+        );
+        StatCRUD.insertStat(
+                new Stat(
+                        "ARE01",
+                        "Tourney 01",
+                        DataGenerator.generateCasualtiesPerBout(),
+                        DataGenerator.generateCasualtiesPerBout(),
+                        DataGenerator.generateCasualtiesPerBout(),
+                        DataGenerator.generateRansomsPerBout(),
+                        CharacterCRUD.getCharacterByCharacterKey("MRT")
+                )
+        );
+        StatCRUD.insertStat(
+                new Stat(
+                        "NYM01",
+                        "Tourney 01",
+                        DataGenerator.generateCasualtiesPerBout(),
+                        DataGenerator.generateCasualtiesPerBout(),
+                        DataGenerator.generateCasualtiesPerBout(),
+                        DataGenerator.generateRansomsPerBout(),
+                        CharacterCRUD.getCharacterByCharacterKey("MRT")
+                )
+        );
+        StatCRUD.insertStat(
+                new Stat(
+                        "DEZ01",
+                        "Tourney 01",
+                        DataGenerator.generateCasualtiesPerBout(),
+                        DataGenerator.generateCasualtiesPerBout(),
+                        DataGenerator.generateCasualtiesPerBout(),
+                        DataGenerator.generateRansomsPerBout(),
+                        CharacterCRUD.getCharacterByCharacterKey("MRT")
+                )
+        );
+    }
 }

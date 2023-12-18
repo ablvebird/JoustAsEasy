@@ -29,13 +29,13 @@ public class Stat {
 
     //FK
     @ManyToOne
-    @JoinColumn(name="character_key", nullable=false)
+    @JoinColumn(name="character_key", nullable=true)
     private Character character;
 
     //CONSTRUCTORS
     public Stat(){}
 
-    public Stat(String statKey, String tourney, int beheadingsPerBout, int guttingsPerBout, int maimingsPerBout, double ransomsPerBout, Character character) {
+    public Stat(String statKey, String tourney, double beheadingsPerBout, double guttingsPerBout, double maimingsPerBout, double ransomsPerBout, Character character) {
         this.statKey = statKey;
         this.tourney = tourney;
         this.beheadingsPerBout = beheadingsPerBout;

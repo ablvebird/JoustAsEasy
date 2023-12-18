@@ -42,7 +42,7 @@ public class HouseCRUD {
         try (Session session = HibernateSettings.getSessionFactory().openSession()) {
             // If no existing house with the same code, proceed with the insertion
             session.beginTransaction();
-            session.save(newHouse);
+            session.persist(newHouse);
             session.getTransaction().commit();
         }
     }
