@@ -1,0 +1,39 @@
+<!--
+hibernate configuration file for the hibernate Tutorial application.
+This file defines the hibernate SessionFactory settings, database connection details,
+and mapping for entity classes.
+-->
+
+<!-- SQLITE -->
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//hibernate/hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!-- Database connection properties for SQLite -->
+        <property name="hibernate.connection.driver_class">org.sqlite.JDBC</property>
+        <property name="hibernate.connection.url">jdbc:sqlite:src/main/resources/tourney.db</property>
+
+        <!-- Connection pool settings -->
+        <property name="hibernate.connection.pool_size">1</property>
+
+        <!-- Current session context strategy -->
+        <property name="hibernate.current_session_context_class">thread</property>
+
+        <!-- SQL logging settings -->
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.format_sql">true</property>
+        <property name="hibernate.highlight_sql">true</property>
+
+        <!-- Database schema generation strategy -->
+        <property name="hibernate.hbm2ddl.auto">create</property>
+
+        <!-- Entity mappings -->
+        <!-- Add your entity mapping files or annotated classes here -->
+        <mapping class="org.entities.Character"/>
+        <mapping class="org.entities.Stat"/>
+        <mapping class="org.entities.House"/>
+        <mapping class="org.entities.Bout"/>
+
+    </session-factory>
+</hibernate-configuration>
