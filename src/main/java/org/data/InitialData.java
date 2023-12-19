@@ -36,6 +36,20 @@ public class InitialData {
         ));
     }
 
+    public static void createAllCharacters(){
+        createStarkCharacters();
+        createLannisterCharacters();
+        createTargaryenCharacters();
+        createMartellCharacters();
+    }
+
+    public static void createAllStats(){
+        createStarkStats();
+        createLannisterStats();
+        createTargaryenStats();
+        createMartellStats();
+    }
+
     public static void createStarkCharacters(){
         CharacterCRUD.insertCharacter(new Character(
                 "NED",
@@ -245,10 +259,10 @@ public class InitialData {
                 new Stat(
                         "NED01",
                         "Tourney 01",
-                        DataGenerator.generateCasualtiesPerBout(),
-                        DataGenerator.generateCasualtiesPerBout(),
-                        DataGenerator.generateCasualtiesPerBout(),
-                        DataGenerator.generateRansomsPerBout(),
+                        StatRandomGenerator.generateCasualtiesPerBout(),
+                        StatRandomGenerator.generateCasualtiesPerBout(),
+                        StatRandomGenerator.generateCasualtiesPerBout(),
+                        StatRandomGenerator.generateRansomsPerBout(),
                         CharacterCRUD.getCharacterByCharacterKey("NED")
                 )
         );
@@ -256,10 +270,10 @@ public class InitialData {
                 new Stat(
                         "HOW01",
                         "Tourney 01",
-                        DataGenerator.generateCasualtiesPerBout(),
-                        DataGenerator.generateCasualtiesPerBout(),
-                        DataGenerator.generateCasualtiesPerBout(),
-                        DataGenerator.generateRansomsPerBout(),
+                        StatRandomGenerator.generateCasualtiesPerBout(),
+                        StatRandomGenerator.generateCasualtiesPerBout(),
+                        StatRandomGenerator.generateCasualtiesPerBout(),
+                        StatRandomGenerator.generateRansomsPerBout(),
                         CharacterCRUD.getCharacterByCharacterKey("NED")
                 )
         );
@@ -267,10 +281,10 @@ public class InitialData {
                 new Stat(
                         "ROD01",
                         "Tourney 01",
-                        DataGenerator.generateCasualtiesPerBout(),
-                        DataGenerator.generateCasualtiesPerBout(),
-                        DataGenerator.generateCasualtiesPerBout(),
-                        DataGenerator.generateRansomsPerBout(),
+                        StatRandomGenerator.generateCasualtiesPerBout(),
+                        StatRandomGenerator.generateCasualtiesPerBout(),
+                        StatRandomGenerator.generateCasualtiesPerBout(),
+                        StatRandomGenerator.generateRansomsPerBout(),
                         CharacterCRUD.getCharacterByCharacterKey("NED")
                 )
         );
@@ -278,10 +292,10 @@ public class InitialData {
                 new Stat(
                         "GRT01",
                         "Tourney 01",
-                        DataGenerator.generateCasualtiesPerBout(),
-                        DataGenerator.generateCasualtiesPerBout(),
-                        DataGenerator.generateCasualtiesPerBout(),
-                        DataGenerator.generateRansomsPerBout(),
+                        StatRandomGenerator.generateCasualtiesPerBout(),
+                        StatRandomGenerator.generateCasualtiesPerBout(),
+                        StatRandomGenerator.generateCasualtiesPerBout(),
+                        StatRandomGenerator.generateRansomsPerBout(),
                         CharacterCRUD.getCharacterByCharacterKey("NED")
                 )
         );
@@ -289,10 +303,10 @@ public class InitialData {
                 new Stat(
                         "ETH01",
                         "Tourney 01",
-                        DataGenerator.generateCasualtiesPerBout(),
-                        DataGenerator.generateCasualtiesPerBout(),
-                        DataGenerator.generateCasualtiesPerBout(),
-                        DataGenerator.generateRansomsPerBout(),
+                        StatRandomGenerator.generateCasualtiesPerBout(),
+                        StatRandomGenerator.generateCasualtiesPerBout(),
+                        StatRandomGenerator.generateCasualtiesPerBout(),
+                        StatRandomGenerator.generateRansomsPerBout(),
                         CharacterCRUD.getCharacterByCharacterKey("NED")
                 )
         );
@@ -303,10 +317,10 @@ public class InitialData {
                 new Stat(
                         "JAI01",
                         "Tourney 01",
-                        DataGenerator.generateCasualtiesPerBout(),
-                        DataGenerator.generateCasualtiesPerBout(),
-                        DataGenerator.generateCasualtiesPerBout(),
-                        DataGenerator.generateRansomsPerBout(),
+                        StatRandomGenerator.generateCasualtiesPerBout(),
+                        StatRandomGenerator.generateCasualtiesPerBout(),
+                        StatRandomGenerator.generateCasualtiesPerBout(),
+                        StatRandomGenerator.generateRansomsPerBout(),
                         CharacterCRUD.getCharacterByCharacterKey("LNN")
                 )
         );
@@ -314,10 +328,10 @@ public class InitialData {
                 new Stat(
                         "SAN01",
                         "Tourney 01",
-                        DataGenerator.generateCasualtiesPerBout(),
-                        DataGenerator.generateCasualtiesPerBout(),
-                        DataGenerator.generateCasualtiesPerBout(),
-                        DataGenerator.generateRansomsPerBout(),
+                        StatRandomGenerator.generateCasualtiesPerBout(),
+                        StatRandomGenerator.generateCasualtiesPerBout(),
+                        StatRandomGenerator.generateCasualtiesPerBout(),
+                        StatRandomGenerator.generateRansomsPerBout(),
                         CharacterCRUD.getCharacterByCharacterKey("LNN")
                 )
         );
@@ -325,10 +339,10 @@ public class InitialData {
                 new Stat(
                         "FLE01",
                         "Tourney 01",
-                        DataGenerator.generateCasualtiesPerBout(),
-                        DataGenerator.generateCasualtiesPerBout(),
-                        DataGenerator.generateCasualtiesPerBout(),
-                        DataGenerator.generateRansomsPerBout(),
+                        StatRandomGenerator.generateCasualtiesPerBout(),
+                        StatRandomGenerator.generateCasualtiesPerBout(),
+                        StatRandomGenerator.generateCasualtiesPerBout(),
+                        StatRandomGenerator.generateRansomsPerBout(),
                         CharacterCRUD.getCharacterByCharacterKey("LNN")
                 )
         );
@@ -336,10 +350,10 @@ public class InitialData {
                 new Stat(
                         "ADA01",
                         "Tourney 01",
-                        DataGenerator.generateCasualtiesPerBout(),
-                        DataGenerator.generateCasualtiesPerBout(),
-                        DataGenerator.generateCasualtiesPerBout(),
-                        DataGenerator.generateRansomsPerBout(),
+                        StatRandomGenerator.generateCasualtiesPerBout(),
+                        StatRandomGenerator.generateCasualtiesPerBout(),
+                        StatRandomGenerator.generateCasualtiesPerBout(),
+                        StatRandomGenerator.generateRansomsPerBout(),
                         CharacterCRUD.getCharacterByCharacterKey("LNN")
                 )
         );
@@ -347,10 +361,10 @@ public class InitialData {
                 new Stat(
                         "LYL01",
                         "Tourney 01",
-                        DataGenerator.generateCasualtiesPerBout(),
-                        DataGenerator.generateCasualtiesPerBout(),
-                        DataGenerator.generateCasualtiesPerBout(),
-                        DataGenerator.generateRansomsPerBout(),
+                        StatRandomGenerator.generateCasualtiesPerBout(),
+                        StatRandomGenerator.generateCasualtiesPerBout(),
+                        StatRandomGenerator.generateCasualtiesPerBout(),
+                        StatRandomGenerator.generateRansomsPerBout(),
                         CharacterCRUD.getCharacterByCharacterKey("LNN")
                 )
         );
@@ -361,10 +375,10 @@ public class InitialData {
                 new Stat(
                         "JOR01",
                         "Tourney 01",
-                        DataGenerator.generateCasualtiesPerBout(),
-                        DataGenerator.generateCasualtiesPerBout(),
-                        DataGenerator.generateCasualtiesPerBout(),
-                        DataGenerator.generateRansomsPerBout(),
+                        StatRandomGenerator.generateCasualtiesPerBout(),
+                        StatRandomGenerator.generateCasualtiesPerBout(),
+                        StatRandomGenerator.generateCasualtiesPerBout(),
+                        StatRandomGenerator.generateRansomsPerBout(),
                         CharacterCRUD.getCharacterByCharacterKey("TRG")
                 )
         );
@@ -372,10 +386,10 @@ public class InitialData {
                 new Stat(
                         "DAA01",
                         "Tourney 01",
-                        DataGenerator.generateCasualtiesPerBout(),
-                        DataGenerator.generateCasualtiesPerBout(),
-                        DataGenerator.generateCasualtiesPerBout(),
-                        DataGenerator.generateRansomsPerBout(),
+                        StatRandomGenerator.generateCasualtiesPerBout(),
+                        StatRandomGenerator.generateCasualtiesPerBout(),
+                        StatRandomGenerator.generateCasualtiesPerBout(),
+                        StatRandomGenerator.generateRansomsPerBout(),
                         CharacterCRUD.getCharacterByCharacterKey("TRG")
                 )
         );
@@ -383,10 +397,10 @@ public class InitialData {
                 new Stat(
                         "GRW01",
                         "Tourney 01",
-                        DataGenerator.generateCasualtiesPerBout(),
-                        DataGenerator.generateCasualtiesPerBout(),
-                        DataGenerator.generateCasualtiesPerBout(),
-                        DataGenerator.generateRansomsPerBout(),
+                        StatRandomGenerator.generateCasualtiesPerBout(),
+                        StatRandomGenerator.generateCasualtiesPerBout(),
+                        StatRandomGenerator.generateCasualtiesPerBout(),
+                        StatRandomGenerator.generateRansomsPerBout(),
                         CharacterCRUD.getCharacterByCharacterKey("TRG")
                 )
         );
@@ -394,10 +408,10 @@ public class InitialData {
                 new Stat(
                         "ROR01",
                         "Tourney 01",
-                        DataGenerator.generateCasualtiesPerBout(),
-                        DataGenerator.generateCasualtiesPerBout(),
-                        DataGenerator.generateCasualtiesPerBout(),
-                        DataGenerator.generateRansomsPerBout(),
+                        StatRandomGenerator.generateCasualtiesPerBout(),
+                        StatRandomGenerator.generateCasualtiesPerBout(),
+                        StatRandomGenerator.generateCasualtiesPerBout(),
+                        StatRandomGenerator.generateRansomsPerBout(),
                         CharacterCRUD.getCharacterByCharacterKey("TRG")
                 )
         );
@@ -405,10 +419,10 @@ public class InitialData {
                 new Stat(
                         "JON01",
                         "Tourney 01",
-                        DataGenerator.generateCasualtiesPerBout(),
-                        DataGenerator.generateCasualtiesPerBout(),
-                        DataGenerator.generateCasualtiesPerBout(),
-                        DataGenerator.generateRansomsPerBout(),
+                        StatRandomGenerator.generateCasualtiesPerBout(),
+                        StatRandomGenerator.generateCasualtiesPerBout(),
+                        StatRandomGenerator.generateCasualtiesPerBout(),
+                        StatRandomGenerator.generateRansomsPerBout(),
                         CharacterCRUD.getCharacterByCharacterKey("TRG")
                 )
         );
@@ -419,10 +433,10 @@ public class InitialData {
                 new Stat(
                         "OBE01",
                         "Tourney 01",
-                        DataGenerator.generateCasualtiesPerBout(),
-                        DataGenerator.generateCasualtiesPerBout(),
-                        DataGenerator.generateCasualtiesPerBout(),
-                        DataGenerator.generateRansomsPerBout(),
+                        StatRandomGenerator.generateCasualtiesPerBout(),
+                        StatRandomGenerator.generateCasualtiesPerBout(),
+                        StatRandomGenerator.generateCasualtiesPerBout(),
+                        StatRandomGenerator.generateRansomsPerBout(),
                         CharacterCRUD.getCharacterByCharacterKey("MRT")
                 )
         );
@@ -430,10 +444,10 @@ public class InitialData {
                 new Stat(
                         "AND01",
                         "Tourney 01",
-                        DataGenerator.generateCasualtiesPerBout(),
-                        DataGenerator.generateCasualtiesPerBout(),
-                        DataGenerator.generateCasualtiesPerBout(),
-                        DataGenerator.generateRansomsPerBout(),
+                        StatRandomGenerator.generateCasualtiesPerBout(),
+                        StatRandomGenerator.generateCasualtiesPerBout(),
+                        StatRandomGenerator.generateCasualtiesPerBout(),
+                        StatRandomGenerator.generateRansomsPerBout(),
                         CharacterCRUD.getCharacterByCharacterKey("MRT")
                 )
         );
@@ -441,10 +455,10 @@ public class InitialData {
                 new Stat(
                         "ARE01",
                         "Tourney 01",
-                        DataGenerator.generateCasualtiesPerBout(),
-                        DataGenerator.generateCasualtiesPerBout(),
-                        DataGenerator.generateCasualtiesPerBout(),
-                        DataGenerator.generateRansomsPerBout(),
+                        StatRandomGenerator.generateCasualtiesPerBout(),
+                        StatRandomGenerator.generateCasualtiesPerBout(),
+                        StatRandomGenerator.generateCasualtiesPerBout(),
+                        StatRandomGenerator.generateRansomsPerBout(),
                         CharacterCRUD.getCharacterByCharacterKey("MRT")
                 )
         );
@@ -452,10 +466,10 @@ public class InitialData {
                 new Stat(
                         "NYM01",
                         "Tourney 01",
-                        DataGenerator.generateCasualtiesPerBout(),
-                        DataGenerator.generateCasualtiesPerBout(),
-                        DataGenerator.generateCasualtiesPerBout(),
-                        DataGenerator.generateRansomsPerBout(),
+                        StatRandomGenerator.generateCasualtiesPerBout(),
+                        StatRandomGenerator.generateCasualtiesPerBout(),
+                        StatRandomGenerator.generateCasualtiesPerBout(),
+                        StatRandomGenerator.generateRansomsPerBout(),
                         CharacterCRUD.getCharacterByCharacterKey("MRT")
                 )
         );
@@ -463,10 +477,10 @@ public class InitialData {
                 new Stat(
                         "DEZ01",
                         "Tourney 01",
-                        DataGenerator.generateCasualtiesPerBout(),
-                        DataGenerator.generateCasualtiesPerBout(),
-                        DataGenerator.generateCasualtiesPerBout(),
-                        DataGenerator.generateRansomsPerBout(),
+                        StatRandomGenerator.generateCasualtiesPerBout(),
+                        StatRandomGenerator.generateCasualtiesPerBout(),
+                        StatRandomGenerator.generateCasualtiesPerBout(),
+                        StatRandomGenerator.generateRansomsPerBout(),
                         CharacterCRUD.getCharacterByCharacterKey("MRT")
                 )
         );

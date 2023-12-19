@@ -1,21 +1,28 @@
 package org.main;
 
+import org.crud.BoutCRUD;
 import org.crud.CharacterCRUD;
 import org.crud.HouseCRUD;
 import org.crud.StatCRUD;
+import org.data.BoutGenerator;
 import org.data.InitialData;
 import org.data.Printer;
 import org.entities.Character;
 import org.entities.House;
 import org.entities.Stat;
+import org.gui.CharacterNavigation;
+import org.gui.MainMenu;
 
 import java.util.List;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
 
+
         //START
         System.out.println("Welcome to Joust as Easy!");
+
 
         //HOUSE DATA
         System.out.println("1) Create initial house data");
@@ -62,6 +69,21 @@ public class Main {
         List<Stat> nedStats = StatCRUD.getStatsByCharacterKey("NED");
         Printer.printStatList(nedStats);
 
-        //
+        //BOUTS
+        System.out.println("10) Create bout data with BoutGenerator");
+        BoutGenerator.generateTourneyBouts(characterList, "Tourney 01");
+
+        System.out.println("11) Print all bout data");
+        Printer.printBoutList(BoutCRUD.getAllBouts());
+
+        System.out.println("12) Print bout data by tourney");
+        Printer.printBoutList(BoutCRUD.getBoutByTourney("Tourney 01"));
+
+        System.out.println("13) Print attacker bout data");
+        Printer.printBoutList(BoutCRUD.getBoutByTourneyAndAttacker("Tourney 01", "NED"));
+
+
+        new MainMenu();
+
     }
 }

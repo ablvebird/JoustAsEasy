@@ -32,8 +32,17 @@ public class StatCRUD {
             return query.getResultList();
         }
     }
+    public static List<Stat> getStatsByHouseKey(String houseKey) {
+        try (Session session = HibernateSettings.getSessionFactory().openSession()) {
+            // HQL query to select stats by houseKey
+            String hql = "select s from Stat s join s.character c where c.house.houseKey = :house_key";
+            Query<Stat> query = session.createQuery(hql, Stat.class);
+            query.setParameter("house_key", houseKey);
 
-
+            // Execute the query and return the stats for characters of the same house
+            return query.getResultList();
+        }
+    }
 
     //INSERT
     public static void insertStat(Stat newStat) {

@@ -1,5 +1,6 @@
 package org.data;
 
+import org.entities.Bout;
 import org.entities.House;
 import org.entities.Character;
 import org.entities.Stat;
@@ -57,6 +58,31 @@ public class Printer {
         System.out.println("Guttings per bout: " + stat.getGuttingsPerBout());
         System.out.println("Maimings per bout: " + stat.getMaimingsPerBout());
         System.out.println("Ransoms per bout: " + stat.getRansomsPerBout());
+        System.out.println("<<<<<<<<<<<<<<<<<<<<<<<<<<\n");
+    }
+
+    //BOUT
+    public static void printBoutList(List<Bout> bouts) {
+        for (Bout bout : bouts) {
+            printBout(bout);
+        }
+    }
+
+    public static void printBout(Bout bout) {
+        System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>");
+        System.out.println("Bout Key: " + bout.getBoutKey());
+        System.out.println("Tourney: " + bout.getTourney());
+        System.out.println("Attacker Points: " + bout.getAttackerPoints());
+        System.out.println("Defender Points: " + bout.getDefenderPoints());
+
+        // Print information about the attacking character
+        System.out.println("Attacking Character: ");
+        printCharacter(bout.getAttackingCharacter());
+
+        // Print information about the defending character
+        System.out.println("Defending Character: ");
+        printCharacter(bout.getDefendingCharacter());
+
         System.out.println("<<<<<<<<<<<<<<<<<<<<<<<<<<\n");
     }
 }
