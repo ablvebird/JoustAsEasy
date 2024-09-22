@@ -19,9 +19,4 @@ La aplicación se encuentra actualmente **en construcción**. El funcionamiento 
 
 ### Documentación
 Puedes encontrar comentarios detallados en formato Javadoc en el código fuente para guiarte a través de las clases, métodos y su propósito:
-- [Documentación de la Clase Main](src/main/java/org/app/Main.java)
-- [Documentación de la Entidad House](src/main/java/org/app/entities/House.java)
-- [Documentación de la Entidad Character](src/main/java/org/app/entities/Character.java)
-- [Documentación de la Entidad Bout](src/main/java/org/app/entities/Bout.java)
-
 Para más detalles sobre el funcionamiento del sistema e instrucciones para extender el código, consulta la documentación en las respectivas clases.
