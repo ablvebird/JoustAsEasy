@@ -1,36 +1,27 @@
-# Joust As Easy - A Hibernate & H2 Showcase
+# Joust As Easy - Una Aplicación Tutorial con Hibernate & H2
 
-**Joust As Easy** is a Java console-based application that demonstrates how to use **Hibernate ORM** with **H2 Database** for entity persistence. This project serves as an educational tool, guiding developers on how to set up, configure, and manage entities using these technologies in Java.
+### Descripción General
+Este proyecto se originó como parte de una práctica para la asignatura de **Acceso a Datos** del **Ciclo Superior de Desarrollo de Aplicaciones Multiplataforma (DAM)**.
 
-## Features
+El objetivo de esta aplicación es servir como **guía y referencia** para construir aplicaciones utilizando **Hibernate** y una base de datos relacional, en este caso, **H2**. El proyecto demuestra conceptos clave como ORM (Mapeo Objeto-Relacional), relaciones entre entidades y operaciones CRUD, todo esto utilizando **Gradle** como herramienta de construcción. Adicionalmente, sirve como válvula de escape temporal para mi obsesión con ASOIAF.
 
-- Full **CRUD** (Create, Read, Update, Delete) operations for entities: `House`, `Character`, and `Bout`.
-- **Hibernate ORM** setup for database interactions.
-- **In-memory H2 database** for simplicity and testing purposes.
-- A fully interactive **console menu** that allows users to manage entities.
-- Example of using **fetch types** (lazy and eager loading) in Hibernate.
-- **Logging** implementation with **Log4j2** for detailed logs and error tracking.
+### Estado del Proyecto
+La aplicación se encuentra actualmente **en construcción**. El funcionamiento y estructura básica de Hibernate están implementados, pero ahora mismo es poco más que un entorno de muestra y testeo.
 
-## Table of Contents
+### Hoja de Ruta
+- **GUI**: Se añadirá una interfaz gráfica de usuario para mejorar la interacción y proporcionar una forma más intuitiva de gestionar los personajes, casas y duelos.
+- **Ampliación del Sistema de Duelos**: Ahora mismo el sistema es estúpidamente simple porque la intención era meramente mostrar el funcionamiento de Hibernate, pero la intención es desarrollarlo en algo más interesante.
 
-- [Project Setup](#project-setup)
-- [Application Structure](#application-structure)
-- [Running the Application](#running-the-application)
-- [Logging](#logging)
-- [License](#license)
+### Características Clave
+- **Navegación basada en consola**: La implementación actual cuenta con un sistema de menú en consola que permite al usuario navegar entre los servicios de **Casa**, **Personaje** y **Duelos**.
+- **Gestión de Entidades**: Administra entidades de `House`, `Character`, y `Bout` con operaciones CRUD completas (Crear, Leer, Actualizar, Eliminar) utilizando Hibernate.
+- **Base de Datos H2 almacenada en disco**: La aplicación utiliza **H2** como base de datos almacenada en ~/data/joustAsEasyDb para facilitar el desarrollo y la simplicidad en las pruebas.
 
-## Project Setup
+### Documentación
+Puedes encontrar comentarios detallados en formato Javadoc en el código fuente para guiarte a través de las clases, métodos y su propósito:
+- [Documentación de la Clase Main](src/main/java/org/app/Main.java)
+- [Documentación de la Entidad House](src/main/java/org/app/entities/House.java)
+- [Documentación de la Entidad Character](src/main/java/org/app/entities/Character.java)
+- [Documentación de la Entidad Bout](src/main/java/org/app/entities/Bout.java)
 
-Before running the application, ensure you have the following prerequisites:
-
-- **Java 23** (or higher)
-- **Gradle** for building the project
-- **Git** (optional, if cloning the repository)
-
-### Clone the Repository
-
-Clone the project from GitHub:
-
-```bash
-git clone https://github.com/<your-username>/joust-as-easy.git
-cd joust-as-easy
+Para más detalles sobre el funcionamiento del sistema e instrucciones para extender el código, consulta la documentación en las respectivas clases.
