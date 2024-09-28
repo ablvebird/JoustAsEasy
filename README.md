@@ -1,4 +1,4 @@
-# Joust As Easy - La Aplicación Tutorial con Hibernate & H2 preferida de GRRM
+# Joust As Easy - La Aplicación Tutorial con Hibernate & H2 preferida de GRRM 🐉
 
 ### Descripción General
 Este proyecto se originó como parte de una práctica para la asignatura de **Acceso a Datos** del **Ciclo Superior de Desarrollo de Aplicaciones Multiplataforma (DAM)**.
