@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"org.app"},{"l":"org.app.consoleMenu"},{"l":"org.app.consoleMenu.boutMenu"},{"l":"org.app.consoleMenu.characterMenu"},{"l":"org.app.consoleMenu.houseMenu"},{"l":"org.app.entities"},{"l":"org.app.model"},{"l":"org.app.services"}];updateSearchResults();

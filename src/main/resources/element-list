@@ -1,0 +1,8 @@
+org.app
+org.app.consoleMenu
+org.app.consoleMenu.boutMenu
+org.app.consoleMenu.characterMenu
+org.app.consoleMenu.houseMenu
+org.app.entities
+org.app.model
+org.app.services
