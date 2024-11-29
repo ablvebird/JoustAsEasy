@@ -1,6 +1,6 @@
 # 🤺 Joust As Easy - La Aplicación Tutorial con Hibernate & H2 preferida de GRRM 🐉
 
-![Joust As Easy Banner](src/main/resources/DALL·E 2024-11-29 18.02.08.webp)
+![Joust As Easy Banner](src/main/resources/DALL·E%202024-11-29%2018.02.08.webp)
 _(thanks Dall-E :B)_
 
 ## 📜 Descripción General
