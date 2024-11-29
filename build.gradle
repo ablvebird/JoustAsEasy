@@ -17,10 +17,28 @@
 plugins {
     // Apply the Java plugin for compiling Java code.
     id 'java'
+
+    // Application plugin to support running the main class
+    id 'application'
 }
 
 group = 'org.app' // The package group of the project.
 version = '1.0-SNAPSHOT' // Version number of the project, used for snapshots.
+
+// Add the main class configuration for the application plugin
+application {
+    // Specify the fully qualified name of your main class
+    mainClass = 'org.app.Main'
+
+    // Configure the application's runtime settings
+    applicationDefaultJvmArgs = [
+            // Increase memory if needed for your application
+            '-Xmx512m',
+
+            // Add any system properties your application needs
+            '-Dlog4j.configurationFile=log4j2.properties'
+    ]
+}
 
 // Configuración de Java
 java {

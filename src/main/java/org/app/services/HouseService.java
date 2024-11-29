@@ -6,11 +6,12 @@ import jakarta.persistence.Persistence;
 import org.app.entities.House;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.app.services.interfaces.IHouseService;
 
 import java.util.List;
 
 /**
- * The {@code HouseService} class provides service methods to manage {@link House} entities.
+ * Implementation of {@link IHouseService} that provides service methods to manage {@link House} entities.
  *
  * <p>This class handles database operations such as retrieving all houses, retrieving a house by its key,
  * and inserting new houses into the database using JPA's {@link EntityManager}.</p>
@@ -20,11 +21,13 @@ import java.util.List;
  *   <li>Handles the lifecycle of {@link EntityManager} and performs transactions for house entities.</li>
  *   <li>Supports eager fetching of related characters using a {@code JOIN FETCH} query.</li>
  *   <li>Logs key actions, such as retrieval and insertion of houses, using the {@link Logger} from Log4j2.</li>
+ *   <li>Implements the {@link IHouseService} interface to provide a standard contract for house operations.</li>
  * </ul>
  *
  * @see House
+ * @see IHouseService
  */
-public class HouseService {
+public class HouseService implements IHouseService {
 
     /** Logger for logging information and errors related to house operations. */
     private static final Logger logger = LogManager.getLogger(HouseService.class);
@@ -40,6 +43,7 @@ public class HouseService {
      *
      * @return A list of all houses with their characters eagerly fetched, or {@code null} if an error occurs.
      */
+    @Override
     public List<House> getAllHouses() {
         EntityManager em = emf.createEntityManager();
         try {
@@ -61,6 +65,7 @@ public class HouseService {
      * @param houseKey The unique key of the house to be retrieved.
      * @return The house with the given key, or {@code null} if no such house is found or if an error occurs.
      */
+    @Override
     public House getHouseByHouseKey(String houseKey) {
         EntityManager em = emf.createEntityManager();
         try {
@@ -83,6 +88,7 @@ public class HouseService {
      *
      * @param newHouse The {@code House} entity to be inserted into the database.
      */
+    @Override
     public void insertHouse(House newHouse) {
         EntityManager em = emf.createEntityManager();
         try {
@@ -106,6 +112,7 @@ public class HouseService {
      * <p>This method ensures that the {@code EntityManagerFactory} is properly closed to release
      * any resources held by the persistence unit.</p>
      */
+    @Override
     public void close() {
         if (emf != null && emf.isOpen()) {
             emf.close();
