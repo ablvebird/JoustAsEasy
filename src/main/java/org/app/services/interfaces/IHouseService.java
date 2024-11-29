@@ -4,35 +4,28 @@ import org.app.entities.House;
 import java.util.List;
 
 /**
- * Interface defining the contract for House-related operations.
- * This interface establishes all possible operations that can be performed with House entities,
- * providing a clear contract for any implementing class.
+ * Service interface for managing House entities in the jousting system.
+ * Provides core operations for retrieving and persisting house data,
+ * including their associated characters relationships.
  */
 public interface IHouseService {
     /**
-     * Retrieves all houses from the data store.
-     *
-     * @return List of all houses with their associated characters, or null if an error occurs
+     * Retrieves all houses with their associated characters.
      */
     List<House> getAllHouses();
 
     /**
-     * Retrieves a specific house by its unique key.
-     *
-     * @param houseKey the unique identifier of the house
-     * @return the house with the specified key, or null if not found or if an error occurs
+     * Finds a specific house by its unique identifier.
      */
     House getHouseByHouseKey(String houseKey);
 
     /**
-     * Persists a new house in the data store.
-     *
-     * @param house the house entity to be persisted
+     * Saves a new house to the data store.
      */
     void insertHouse(House house);
 
     /**
-     * Releases any resources held by the service.
+     * Cleans up resources when the service is no longer needed.
      */
     void close();
 }

@@ -4,43 +4,33 @@ import org.app.entities.Character;
 import java.util.List;
 
 /**
- * Interface defining the contract for Character-related operations.
- * This interface establishes all possible operations that can be performed with Character entities,
- * providing a clear contract for any implementing class.
+ * Service interface for managing Character entities in the jousting system.
+ * Provides operations for retrieving and persisting character data,
+ * including queries based on house affiliations.
  */
 public interface ICharacterService {
     /**
-     * Retrieves all characters from the data store.
-     *
-     * @return List of all characters, or null if an error occurs
+     * Retrieves all characters in the system.
      */
     List<Character> getAllCharacters();
 
     /**
-     * Retrieves all characters associated with a specific house.
-     *
-     * @param houseKey The unique key of the house whose characters are to be retrieved
-     * @return List of characters belonging to the specified house, or null if an error occurs
+     * Retrieves all characters belonging to a specific house.
      */
     List<Character> getCharactersByHouseKey(String houseKey);
 
     /**
-     * Retrieves a specific character by its unique key.
-     *
-     * @param characterKey The unique key of the character to retrieve
-     * @return The character with the specified key, or null if not found or if an error occurs
+     * Finds a specific character by their unique identifier.
      */
     Character getCharacterByCharacterKey(String characterKey);
 
     /**
-     * Persists a new character in the data store.
-     *
-     * @param character The character entity to be persisted
+     * Saves a new character to the data store.
      */
     void insertCharacter(Character character);
 
     /**
-     * Releases any resources held by the service.
+     * Cleans up resources when the service is no longer needed.
      */
     void close();
 }
