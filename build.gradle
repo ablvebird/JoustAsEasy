@@ -22,14 +22,32 @@ plugins {
 group = 'org.app' // The package group of the project.
 version = '1.0-SNAPSHOT' // Version number of the project, used for snapshots.
 
+// Configuración de Java
+java {
+    sourceCompatibility = JavaVersion.VERSION_11
+    targetCompatibility = JavaVersion.VERSION_11
+}
+
 repositories {
     // Use Maven Central repository to download dependencies.
     mavenCentral()
 }
 
+// Configuración de directorios de recursos
+sourceSets {
+    main {
+        resources {
+            srcDirs = ['src/main/resources']
+        }
+    }
+    test {
+        resources {
+            srcDirs = ['src/test/resources']
+        }
+    }
+}
+
 dependencies {
-    // JUnit 5 (Jupiter) for writing and running tests.
-    implementation 'org.junit.jupiter:junit-jupiter-api:5.11.0'
     // Hibernate Core ORM library for mapping Java classes to database tables.
     implementation 'org.hibernate.orm:hibernate-core:6.6.1.Final'
     // Hibernate Validator for enforcing constraints on object fields.
@@ -45,9 +63,55 @@ dependencies {
 
     // H2 database dependency, which is a lightweight, in-memory, or file-based database.
     runtimeOnly 'com.h2database:h2:2.3.232'
+
+    // Testing dependencies
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.11.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.11.0'
 }
 
 test {
     // Configure Gradle to use JUnit Platform for running tests.
     useJUnitPlatform()
+    // Show test output in console
+    testLogging {
+        events "passed", "skipped", "failed"
+    }
+}
+
+// Tarea para limpiar la documentación generada
+tasks.register('cleanDocs', Delete) {
+    delete "${projectDir}/docs/javadoc"
+}
+
+tasks.javadoc {
+    destinationDir = file("${projectDir}/docs/javadoc")
+    dependsOn cleanDocs
+
+    options {
+        encoding = 'UTF-8'
+        charSet = 'UTF-8'
+        author = true
+        version = true
+        use = true
+
+        // Título de la ventana del navegador
+        windowTitle = 'JoustAsEasy API Documentation'
+
+        // Título principal de la documentación
+        title = "JoustAsEasy Documentation (Version ${project.version})"
+
+        // Enlaces a la documentación de Java
+        links = ['https://docs.oracle.com/en/java/javase/11/docs/api/']
+
+        // Grupos de paquetes para mejor organización usando Map
+        groups = [
+                'Core Entities': ['org.app.entities*'],
+                'Services': ['org.app.services*'],
+                'Console Interface': ['org.app.consoleMenu*'],
+                'Models': ['org.app.model*']
+        ]
+
+        // Mostrar warnings de javadoc
+        addStringOption('Xdoclint:none', '-quiet')
+    }
 }
